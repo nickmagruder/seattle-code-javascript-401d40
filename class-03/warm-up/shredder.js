@@ -11,7 +11,7 @@
 //   return array;
 // }
 
-const shredder = {
+/* const shredder = {
   map: function(arr, callback) {
   
     let array = [];
@@ -22,6 +22,27 @@ const shredder = {
 
     return array;
   }
+} */
+
+
+
+const shredder = {
+  filter: function(arr, callback) {
+  
+    let array = [];
+
+    for (let i = 0; i < arr.length; i++) {
+      if (!callback(arr[i])) {
+      array.push(arr[i]);
+      }
+    }
+    return array;
+  }
 }
+
+
+
+
+
 
 module.exports = shredder;

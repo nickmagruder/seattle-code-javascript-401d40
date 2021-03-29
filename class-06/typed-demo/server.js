@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// allow our server to receive  JSON from requests
+// allow our server to receive JSON from requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

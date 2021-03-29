@@ -3,7 +3,7 @@
 const $$ = require('./shredder.js');
 
 
-describe('Testig the shredder librrary',() => {
+/* describe('Testig the shredder librrary',() => {
   it('should map through an array', () => {
 
     let array = [1,2,3,4];
@@ -13,5 +13,19 @@ describe('Testig the shredder librrary',() => {
 
     let test = $$.map(array, callback);
     expect(test).toEqual([1,4,9,16]);
+  });
+}); */
+
+
+describe('Testig the shredder librrary',() => {
+  it('should map through an array', () => {
+
+    let array = [1,2,3,4];
+    function callback(val,idx) {
+        return !(value % 2)
+    }
+
+    let test = $$.map(array, callback);
+    expect(test).toEqual([2,4]);
   });
 });
